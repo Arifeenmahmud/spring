@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head></head>
+<body>
+
+<form th:action= "@{/user/save}" th:object="${user}" method="post">
+
+ <table>
+ <tr>
+ <td>
+ <div>
+<input type="hidden" th:field="*{id}"/>
+</div>
+ </td>
+
+<td>
+<div>
+<label>name</label>
+<input type="text" th:field="*{name}"/>
+</div>
+</td>
+
+
+<td>
+<div>
+<label>age</label>
+<input type="text" th:field="*{age}"/>
+</div>
+</td>
+
+<td>
+<dive>
+<button type="submit">Submit</button>
+</dive>
+</td>
+</form>
+
+<a href="/user/list">Go to Add User Page</a>
+
+</tr>
+</table>
+	
+</body>
+
+</html>
